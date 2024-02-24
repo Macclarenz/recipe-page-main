@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+
+/* ## Colors
+
+### Primary
+
+- Nutmeg: hsl(14, 45%, 36%)
+- Dark Raspberry: hsl(332, 51%, 32%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Rose White: hsl(330, 100%, 98%)
+- Eggshell: hsl(30, 54%, 90%)
+- Light Grey: hsl(30, 18%, 87%)
+- Wenge Brown: hsl(30, 10%, 34%)
+- Dark Charcoal: hsl(24, 5%, 18%) */
+
+:root {
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
+
+    --white: white;
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Young Serif', serif;
+    font-weight: 400;
+}
+
+p, td, li {
+    font-family: 'Outfit', sans-serif;
+}
+
+img {
+    object-fit: cover;
+    max-height: 180px;
+    margin: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    position: absolute;
+}
+
+body {
+    background-color: var(--eggshell);
+    display: flex;
+    justify-content: center;
+}
+main {
+    background: var(--white);
+    padding: 13rem 2em 2em;
+    max-width: 730px;
+}
+
+header {
+    h1 {
+        color: var(--dark-charcoal);
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 1.1;
+        margin-bottom: .75em;
+    }
+
+    p {
+        color: var(--wenge-brown);
+        line-height: 1.4;
+    }  
+}
+
+.preparation-time-container {
+    background-color: var(--rose-white);
+    border-radius: .5em;
+    padding: 1em 1.25em;
+    margin-block: 1.5em;
+
+    h2 {
+        color: var(--dark-raspberry);
+        font-family: 'Outfit', sans-serif;
+        font-weight: 600;
+        font-size: 21px;
+        font-size: 21px;
+    }
+
+    .preparation-time-list {
+        color: var(--dark-charcoal);
+        margin-left: 1.5em;
+
+        & > * {
+            margin-block: .5em;
+            padding-left: 1.25em;
+        }
+    }
+}
+
+.ingredients-container {
+    border-bottom: 1px solid var(--light-grey);
+    padding-bottom: 1.25em;
+    h2 {
+        color: var(--nutmeg);
+    }
+
+    .ingredients-list {
+        color: var(--dark-charcoal);
+        margin-top: .75em;
+        margin-left: 1.25em;
+
+        & > li {
+            margin-block: .75em;
+            padding-left: 1em;
+        }
+    }
+}
+
+.instructions-container {
+    border-bottom: 1px solid var(--light-grey);
+    margin-block: 1.75em;
+    padding-bottom: 1.25em;
+
+    h2 {
+        color: var(--nutmeg)
+    }
+
+    .instructions-list {
+        color: var(--nutmeg);
+        font-family: 'Outfit',sans-serif;
+        font-weight: 700;
+        margin-left: 1.5em;
+
+        & > li {
+            line-height: 1.4;
+            font-weight: 700;
+            font-size: 16px;
+            padding-left: 1em;
+            margin-block: .75em;
+        }
+
+        li b {
+            display: inline;
+            color: var(--dark-charcoal);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        li p {
+            color: var(--dark-charcoal);
+            display: inline;
+            font-weight: 400;
+        }
+    }
+}
+
+.nutrition-container {
+    margin-block: 1.5em 0em;
+
+    h2 {
+        color: var(--nutmeg);
+        margin-bottom: .75em;
+    }
+
+    p {
+        color: var(--dark-charcoal);
+    }
+
+    .nutrition-table {
+        border-collapse: collapse;
+        margin-top: .5em;
+        width: 100%;
+
+        td {
+            padding: 1em;
+        }
+        
+        tr:not(:last-of-type) td {
+            border-bottom: 1px solid var(--light-grey);
+        }
+
+        td:first-of-type {
+            color: var(--dark-charcoal);
+            padding-left: 2em;
+        }
+
+        td:last-of-type {
+            color: var(--nutmeg);
+            font-weight: 700;
+            padding: 1em 1em 1em -2em;
+        }
+        
+    }
+}
+
+@media (min-width: 700px) {
+
+    body {
+        padding-block: 7em;
+    }
+    img {
+        border-radius: 1em;
+        position: static;
+        margin-bottom: 2em;
+        max-height:none;
+    }
+
+    main {
+        border-radius: 1.25em;
+        padding-top: 2em;
+    }
+}
